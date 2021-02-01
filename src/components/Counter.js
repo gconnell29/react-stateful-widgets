@@ -70,13 +70,21 @@ export default function Counter() {
     color: 'royalblue', /* STEP 2 */
   };
 
-  count%2 == 0 ? style.color = 'royalblue' : style.color = 'crimson';
+  let oddEven = 'even';
+  // count%2 == 0 ? style.color = 'royalblue' : style.color = 'crimson';
+  if(count%2 == 0) {
+    oddEven = 'even';
+    style.color = 'royalblue'
+  } else {
+    oddEven = 'odd';
+    style.color = 'crimson'
+  }
 
   return (
     <div className='widget-counter container'>
       <h2>Counter</h2>
       <div id='count' style={style}>
-        Number {count} is even {/* STEP 3 */}
+        Number {count} is {oddEven} {/* STEP 3 */}
       </div>
       <div>
         <button id='increment' onClick={increment}>Increment</button>
