@@ -70,6 +70,8 @@ export default function Counter() {
     color: 'royalblue', /* STEP 2 */
   };
 
+  count%2 == 0 ? style.color = 'royalblue' : style.color = 'crimson';
+
   return (
     <div className='widget-counter container'>
       <h2>Counter</h2>
